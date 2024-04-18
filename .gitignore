@@ -4,3 +4,4 @@ dist/*
 .terraform.lock.hcl
 node_modules
 plan
+.DS_Store

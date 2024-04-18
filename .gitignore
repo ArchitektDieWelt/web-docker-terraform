@@ -1,0 +1,6 @@
+.idea
+dist/*
+.terraform/
+.terraform.lock.hcl
+node_modules
+plan

@@ -1,0 +1,17 @@
+{
+  "assets": [
+    {
+      "type": "js",
+      "buildType": "modern",
+      "src": "//assets/main-b5b4c7ce.js"
+    },
+    {
+      "type": "css",
+      "src": "//assets/main-a27f8072.css"
+    }
+  ],
+  "module": "example-module",
+  "type": "observed",
+  "version": "1.0.0",
+  "selector": "example-module"
+}

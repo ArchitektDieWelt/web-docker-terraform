@@ -1,7 +1,7 @@
 module "s3_source_bucket" {
   source  = "./s3"
 
-  name        = "webdocker-s3-source-bucket"
+  name        = var.source_bucket_name
   project     = var.project
   environment = var.environment
   description = var.description

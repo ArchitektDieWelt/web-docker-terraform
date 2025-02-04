@@ -17,6 +17,12 @@ variable "lambda_name" {
     default = "webdocker-config-update"
 }
 
+variable "source_bucket_name" {
+  type = string
+  default = "webdocker-s3-source-bucket"
+  description = "the bucket name for bucket that will hold partial configurations, will be created by terraform"
+}
+
 variable "s3_destination_configs_asset_key" {
   description = "the concatenated config file path used by the webdocker - destination"
   type        = string
@@ -46,4 +52,16 @@ variable "cloudfront_distribution_arn" {
 
 variable "aws_account_id" {
   type = string
+}
+
+variable "iam_config_deployer_user_name" {
+  type = string
+  description = "name of the user that will be created to use for config updates in s3"
+  default = "update-webdocker-config-pipeline-user"
+}
+
+variable "config_bucket_update_policy_name" {
+  type = string
+  default = "update-webdocker-config-pipeline-policy"
+  description = "name for the policy that allows access for the deployer user to the source s3 bucket"
 }

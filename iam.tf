@@ -55,7 +55,7 @@ data "aws_iam_policy_document" "webdocker_exec_policy" {
 }
 
 resource "aws_iam_user" "configs_deployer_user" {
-  name = "update-webdocker-config-pipeline-user"
+  name = var.iam_config_deployer_user_name
 }
 
 resource "aws_iam_user_policy_attachment" "configs_deployer_user_policy" {
@@ -64,7 +64,7 @@ resource "aws_iam_user_policy_attachment" "configs_deployer_user_policy" {
 }
 
 resource "aws_iam_policy" "update-webdocker-config-pipeline-policy" {
-  name        = "update-webdocker-config-pipeline-policy"
+  name        = var.config_bucket_update_policy_name
   description = "Policy to upload into configuration bucket"
 
   # Terraform's "jsonencode" function converts a

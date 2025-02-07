@@ -80,7 +80,7 @@ resource "aws_lambda_function" "lambda_function" {
   runtime       = var.runtime
 
   s3_bucket = var.bucket
-  s3_key    = "${var.gitName == "" ? var.name : var.gitName}/${var.ref}.zip"
+  s3_key    = "${var.gitName == "" ? var.name : var.gitName}/${var.ref}"
 
   reserved_concurrent_executions = var.concurrent_executions
 

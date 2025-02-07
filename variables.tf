@@ -69,4 +69,5 @@ variable "config_bucket_update_policy_name" {
 variable "bucket_key_prefix" {
   description = "Key prefix for your handler location in the bucket, goes before function name"
   type = string
+  default = ""
 }

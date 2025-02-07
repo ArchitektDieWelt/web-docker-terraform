@@ -2,6 +2,7 @@ module "webdocker_lambda" {
   source  = "./lambda"
 
   name                         = var.lambda_name
+  gitName                      = var.bucket_key_prefix
   project                      = var.project
   environment                  = var.environment
   description                  = var.description

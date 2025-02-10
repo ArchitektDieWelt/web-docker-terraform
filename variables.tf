@@ -1,6 +1,6 @@
 variable "aws_region" { default = "eu-central-1" }
 variable "lambda_script_reference" {
-  default = "latest"
+  default = "latest.zip"
 }
 variable "project" {
   default = "web-docker"

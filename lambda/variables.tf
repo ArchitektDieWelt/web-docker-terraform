@@ -5,7 +5,7 @@ variable "environment" {}
 variable "description" {}
 
 variable "ref" {
-  default = "latest"
+  default = "latest.zip"
 }
 
 variable "policy_file" {
@@ -29,7 +29,6 @@ variable "bucket" {
     type        = string
     default = "webdocker-test-public"
 }
-variable "gitName" { default = "" }
 variable "handler" { default = "main.handler" }
 variable "runtime" { default = "nodejs18.x" }
 variable "environmentVariables" {

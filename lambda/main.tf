@@ -32,7 +32,7 @@ resource "aws_iam_role_policy" "read_from_root_s3" {
         "Action": [
           "s3:GetObject"
         ],
-        "Resource": "arn:aws:s3:::${var.bucket}/${var.name}/*"
+        "Resource": "arn:aws:s3:::${var.bucket}/${var.ref}"
       }
     ]
   }
@@ -80,7 +80,7 @@ resource "aws_lambda_function" "lambda_function" {
   runtime       = var.runtime
 
   s3_bucket = var.bucket
-  s3_key    = "${var.gitName == "" ? var.name : var.gitName}/${var.ref}"
+  s3_key    = var.ref
 
   reserved_concurrent_executions = var.concurrent_executions
 

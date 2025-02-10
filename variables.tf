@@ -65,9 +65,3 @@ variable "config_bucket_update_policy_name" {
   default = "update-webdocker-config-pipeline-policy"
   description = "name for the policy that allows access for the deployer user to the source s3 bucket"
 }
-
-variable "bucket_key_prefix" {
-  description = "Key prefix for your handler location in the bucket, goes before function name"
-  type = string
-  default = ""
-}
